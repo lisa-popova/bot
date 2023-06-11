@@ -9,7 +9,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands="start")
 async def start(message: types.Message):
-    await message.reply("Привет от pingvi! бот пока в разработке")
+    await message.reply("Привет от pingvi! Бот пока в разработке")
 
 
 @dp.message_handler(commands="photo")
