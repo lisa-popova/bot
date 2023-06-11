@@ -11,10 +11,18 @@ dp = Dispatcher(bot)
 async def start(message: types.Message):
     await message.reply("Привет от pingvi! Бот пока в разработке")
 
+@dp.message_handler(commands="info")
+async def start(message: types.Message):
+    await message.reply('этот бот для круток')
 
 @dp.message_handler(commands="photo")
 async def picture(message: types.Message):
     photo = open('photo/genshin.jpg', 'rb')
+    await message.answer_photo(photo=photo, caption='<3')
+
+@dp.message_handler(commands="Arlekkino")
+async def picture(message: types.Message):
+    photo = open('photo/eolekino.jpg', 'rb')
     await message.answer_photo(photo=photo, caption='<3')
 
 
