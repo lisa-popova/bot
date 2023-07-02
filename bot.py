@@ -28,16 +28,32 @@ async def one_wish(message: types.Message):
     answer = ''
     num = randint(0, 1000)
     if 1 <= num <= 700:
-        answer = 'Оружие 3 звезды'
+        answer =  'Оружие 3 звезды'
     elif 701 <= num <= 900:
         answer = 'Оружие 4 звезды'
     elif 901 <= num <= 1000:
         answer = 'Оружие 5 звёзд'
     await message.reply(answer)
 
+
+#Оружие 3 звезды
+#Оружие 5 звезд
+#Оружие 3 звезды
+#Оружие 3 звезды
+
 @dp.message_handler(text="10 круток")
 async def ten_wish(message: types.Message):
-    await message.reply("Выпадает дофига всего!")
+    answer = ''
+    for i in range(10):
+        num = randint(0, 1000)
+        if 1 <= num <= 700:
+            answer +=  'Оружие 3 звезды' + "\n"
+        elif 701 <= num <= 900:
+            answer += 'Оружие 4 звезды' + "\n"
+        elif 901 <= num <= 1000:
+            answer += 'Оружие 5 звёзд' + "\n"
+
+    await message.reply(answer)
 
 @dp.message_handler(commands="info")
 async def start(message: types.Message):
