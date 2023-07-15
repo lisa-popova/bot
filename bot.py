@@ -20,7 +20,7 @@ async def start(message: types.Message):
         keyboard=kb,
         resize_keyboard=True,
     )
-    await message.answer("Привет, Первопроходец! Хочешь сделать крутку?", reply_markup=keyboard)
+    await message.answer("Привет, Путешественник! Хочешь сделать крутку?", reply_markup=keyboard)
 
 
 @dp.message_handler(text="1 крутка")
